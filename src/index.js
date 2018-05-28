@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Uncontrolled from './uncontrolled';
 
-ReactDOM.render(<TreeView />, document.getElementById('root'));
+ReactDOM.render(<Uncontrolled />, document.getElementById('uncontrolled'));
