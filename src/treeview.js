@@ -4,13 +4,16 @@ class TreeView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      opened: true,
+      opened: this.props.defaultOpened === undefined ? true : this.props.defaultOpened,
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
     this.setState({opened: !this.state.opened});
+    if (this.props.onClick) {
+      this.props.onClick();
+    }
   }
 
   render() {
